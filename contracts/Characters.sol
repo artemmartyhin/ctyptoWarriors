@@ -60,18 +60,18 @@ contract Characters{
         require(characters[_charId].skillpoints<=_nump);
         require(msg.sender==charToOwner[_charId]);
         if(keccak256(bytes(_skill))==keccak256("strength")){
-            characters[_charId].physDamage.add(_nump+2);
+            characters[_charId].physDamage.add(_nump+3);
             characters[_charId].pearceDefence.add(_nump+1);
             characters[_charId].physDefence.add(_nump+2);
 
         }
         if(keccak256(bytes(_skill))==keccak256("mana")){
-            characters[_charId].magDamage.add(_nump+2);
+            characters[_charId].magDamage.add(_nump+3);
             characters[_charId].physDefence.add(_nump+1);
             characters[_charId].magDefence.add(_nump+2);
         }
         if(keccak256(bytes(_skill))==keccak256("stamina")){
-            characters[_charId].pearceDamage.add(_nump+2);
+            characters[_charId].pearceDamage.add(_nump+3);
             characters[_charId].magDefence.add(_nump+1);
             characters[_charId].pearceDefence.add(_nump+2);
         }

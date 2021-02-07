@@ -22,7 +22,7 @@ contract CryptoWars is HeroesTrader{
         require(charToOwner[_charId]==msg.sender);
         fight(_enemyId, _charId);
     }
-    function fight(uint _enemyId, uint _charId) public{
+    function fight(uint _enemyId, uint _charId) private{
         uint eDamage;
         uint cDamage;
         if(characters[_enemyId].physDamage>characters[_charId].physDefence){
